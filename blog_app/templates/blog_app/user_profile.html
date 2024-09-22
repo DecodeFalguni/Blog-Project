@@ -1,0 +1,80 @@
+{% extends "layouts/app.html" %}
+{% load static %}
+{% block title %}
+ Register
+{% endblock  %}
+{% block style %}
+<link href="{% static "auth_css/styles.css" %}" rel="stylesheet">
+{% endblock  %}
+
+
+{% block content %}
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="{% url 'register' %}">Register</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'login' %}">Login<span class="sr-only"></span></a>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+
+
+
+
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center mb-4">Create an Account</h2>
+        <form method="POST" action="{% url 'register' %}">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="{{ form.first_name.id_for_label }}" class="form-label">First Name</label>
+              <input type="text" name="{{ form.first_name.name }}" class="form-control" id="first_name" value="{{ form.first_name.value }}" required>
+              <span class="text-danger">
+                  {{ form.first_name.errors}}
+              </span>
+          </div>
+          <div class="mb-3">
+            <label for="{{ form.last_name.id_for_label }}" class="form-label">Last Name</label>
+            <input type="email" name="{{ form.last_name.name }}" class="form-control" id="last_name" value="{{ form.last_name.value }}" required>
+            <span class="text-danger">
+                {{ form.last_name.errors}}
+            </span>
+        </div>
+            <div class="mb-3">
+                <label for="{{ form.username.id_for_label }}" class="form-label">Username</label>
+                <input type="email" name="{{ form.username.name }}" class="form-control" id="username" value="{{ form.username.value }}" required>
+                <span class="text-danger">
+                    {{ form.username.errors}}
+                </span>
+            </div>
+            <div class="mb-3">
+                <label for="{{ form.password1.id_for_label }}" class="form-label">Password</label>
+                <input type="password" name="{{ form.password1.name }}" class="form-control" id="password" value="{{ form.password1.value }}" required>
+                <span class="text-danger">
+                    {{ form.password1.errors}}
+                </span>
+            </div>
+            <div class="mb-3">
+                <label for="{{ form.password2.id_for_label }}" class="form-label">Confirm Password</label>
+                <input type="password" name="{{ form.password2.name }}" class="form-control" id="password" name="{{ form.password2.value }}" required>
+                <span class="text-danger">
+                    {{ form.password2.errors}}
+                </span>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Register</button>
+        </form>
+        <p class="text-center mt-3">Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+    </div>
+</div>
+
+{% endblock  %}

@@ -1,0 +1,150 @@
+body {
+    background: linear-gradient(to right, #000000, #333333); /* Black gradient background */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding-top: 70px; /* Added padding to prevent overlap with fixed navbar */
+    min-height: 100vh; /* Ensure full viewport height */
+    color: white; /* White text for readability */
+}
+
+.container-fluid {
+    padding: 20px;
+}
+
+.navbar {
+    z-index: 1000; /* Ensures navbar stays on top */
+    background: #000000; /* Black background for navbar */
+}
+
+.navbar-brand {
+    color: #FFD700 !important; /* Gold color for navbar text */
+}
+
+.navbar-toggler-icon {
+    color: white;
+}
+
+.blog-form {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff; /* White background for forms */
+    color: black; /* Black text */
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-weight: 700;
+    color: #FFD700; /* Gold header text */
+    text-align: center;
+}
+
+label {
+    font-weight: 500;
+    color: rgb(0, 0, 0); /* White labels */
+}
+
+.form-control {
+    border-radius: 10px;
+    border: 1px solid #FFD700; /* Gold border for form controls */
+}
+
+.form-control:focus {
+    border-color: #FFD700; /* Gold focus border */
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5); /* Gold glow */
+}
+
+.btn-custom {
+    background-color: #FFD700; /* Gold button */
+    border: none;
+    color: black;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #333333; /* Darker hover effect */
+    color: white; /* White text on hover */
+}
+
+a {
+    color: #FFD700; /* Gold links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #FFFFFF; /* White on hover */
+}
+
+.blogs {
+    margin: auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #1c1c1c; /* Dark background for blog containers */
+}
+
+.blog-detail {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #000000; /* Black background for blog detail */
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-detail h2 {
+    font-weight: 700;
+    color: #FFD700; /* Gold for blog titles */
+}
+
+.blog-detail img {
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #FFD700; /* Gold border around blog images */
+}
+
+.blog-content {
+    margin-top: 20px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #ffffff; /* White text for blog content */
+}
+.blog-content1 {
+    margin-top: 20px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #010101; /* White text for blog content */
+}
+.card-img-top {
+    height: 200px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures image covers the card */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-custom {
+    background-color: #FFD700; /* Gold buttons */
+    color: black;
+}
+
+.btn-custom:hover {
+    background-color: #333333; /* Black on hover */
+    color: white;
+}
+
+.alert-dismissible {
+    background-color: #FFD700; /* Gold background for alerts */
+    color: black;
+}
+
+.alert-dismissible .close {
+    color: black;
+}
